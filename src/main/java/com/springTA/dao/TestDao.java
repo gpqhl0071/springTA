@@ -13,6 +13,6 @@ public class TestDao {
 	private JdbcTemplate jdbcTemplate;
 
 	public void save(String name, Integer age) {
-		jdbcTemplate.update("insert into test (name,age) values (?, ?)", name, age);
+		jdbcTemplate.update("insert into test (name,age,input_time) values (?, ?,now())", name, age);
 	}
 }
